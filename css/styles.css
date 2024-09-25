@@ -1,0 +1,224 @@
+@import url('reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+		url('../fonts/Roboto-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+		url('../fonts/Roboto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+body{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    background: url(../img/david-marcu.png) no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+}
+.container{
+    position: fixed;
+    right: 0;
+    backdrop-filter: blur(5px);
+    width: 496px;
+    height: 100%;
+}
+.switch input{
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.switch label{
+    display: flex;
+    width: 340px;
+    height: 36px;
+    border: 1px solid #153416;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch label::before{
+    content: '';
+    position: absolute;
+    width: 168px;
+    height: 32px;
+    top: 1px;
+    left: 1px;
+    background: #153416;
+    border-radius: 30px;
+    transition: all .5s linear;
+}
+.switch input:checked + label::before{
+    transform: translateX(100%);
+}
+.switch label span{
+    display: flex;
+    flex: 1 1 50%;
+    align-self: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+}
+.switch{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.entrance{
+    margin-bottom: 29px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 30px;
+}
+.email-password{
+    border-radius: 30px;
+    width: 100%;
+    background: #929191;
+    outline: none !important;
+    border: none; 
+    padding: 15px 0 15px 20px;
+    color: crimson;
+}
+
+::placeholder{
+    color: #fff;
+    
+}
+.input-email-password input + input{
+    margin-top: 15px;
+}
+.block-2{
+    padding-top: 75px;
+    width: 340px;
+    color: #fff;
+    margin: auto;
+}
+.think{
+    display: flex;
+    margin-top: 21px ;
+}
+.think a{
+    position: sticky;
+    left: 100%;
+    color: #153416;
+}
+.btn{
+    cursor: pointer;
+    width: 100%;
+    background: #153416;
+    height: 44px;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 30px;
+}
+.reg{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.reg a{
+    text-decoration: none;
+    color: #153416;
+}
+.reg a+a{
+    text-decoration: underline;
+    color: #fff;
+}
+.svg-list {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.svg-list  svg{
+    width: 24px;
+    height: 24px;
+    fill: #153416;
+}
+.social{
+    margin-top: 30px;
+    text-align: center;
+}
+.social p{
+    padding: 0 0 20px;
+    color: #153416;
+}
+
+.think input {
+	position: absolute;
+	z-index: -1;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.think label {
+	display: inline-block;
+	padding: 5px 5px 5px 30px;
+	position: relative;
+	cursor: pointer;
+}
+.think label::before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+    border: 2px solid #fff;
+    border-radius: 2px;
+}
+
+.think input:checked+label::before {
+	background: #153416;
+   border-color: #153416;
+   border-radius: 2px;
+}
+
+.think input:checked+label::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	width: 6px;
+	height: 12px;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(38deg);
+}
+
